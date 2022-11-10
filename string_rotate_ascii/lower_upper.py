@@ -9,3 +9,8 @@ print(chr(ord(x)-ord('A')+ord('a')))  # 아스키 번호를 문자로 변환 h
 x=input()
 
 print(chr(ord(x)-ord('a')+ord('A')))
+
+-----------------------------------------------------------------------
+
+print('A'.lower())
+print('a'.upper())

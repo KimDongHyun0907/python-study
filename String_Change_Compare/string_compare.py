@@ -1,0 +1,5 @@
+print('abc'=='abd')
+print('abc'=='abc')
+print('abc'<'bc')
+print('ab'<'bc')
+print('bd'<'bc')

@@ -6,7 +6,7 @@ if a>=50:
 if a>=20:
     print('banana')
 
-else:
+ele:
     print('peach')
 
 print('wow')

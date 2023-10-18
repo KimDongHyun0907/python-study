@@ -37,9 +37,6 @@ for y in range(y1, y2):
 
 b += count_days(y2, m2, d2)
 
-c = b-a
-
-week_index = week.index(weekday)
-week = week[week_index:]+week[:week_index]
+c = b-a+week.index(weekday)
 
 print(week[c % 7])

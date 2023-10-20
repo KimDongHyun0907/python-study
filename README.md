@@ -10,3 +10,4 @@
 9. [반복문_while](https://github.com/KimDongHyun0907/python-study/tree/main/while_loop)
 10. [반복문 활용](https://github.com/KimDongHyun0907/python-study/tree/main/loop_problem)
 11. [다중 반복문](https://github.com/KimDongHyun0907/python-study/tree/main/multiple%20loops)
+12. [리스트](https://github.com/KimDongHyun0907/python-study/tree/main/list)

@@ -1,2 +1,2 @@
 # 블로그 참조
-[반복문(while)](https://kdh9797-devwiki.tistory.com/62)
+[시간, 날짜, 요일](https://kdh9797-devwiki.tistory.com/62)

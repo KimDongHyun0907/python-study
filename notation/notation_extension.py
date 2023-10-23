@@ -1,6 +1,6 @@
 def isError(a, n):
     for i in n:
-        if ord(i)-ord('A')+10 >= a:
+        if not i.isdigit() and ord(i)-ord('A')+10 >= a:
             return False
     return True
 

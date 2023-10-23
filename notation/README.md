@@ -1,0 +1,2 @@
+# 블로그 참고
+[진수 변환](https://kdh9797-devwiki.tistory.com/63)

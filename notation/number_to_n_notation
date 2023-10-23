@@ -1,0 +1,10 @@
+num, n = map(int, input().split())
+
+arr = []
+
+while num >= n:
+    arr.append(num % n)
+    num //= n
+arr.append(num)
+
+print(''.join(map(str, arr[::-1])))

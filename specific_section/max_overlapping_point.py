@@ -19,24 +19,9 @@ for x, y in arr:
 # 겹치는 구간의 최대 개수
 max_val = max(points)
 
-# 가장 많이 겹치는 구간 구하기
-j = 1  # index
-range_arr = []  # 많이 겹치는 구간의 리스트
-isbool = False  # True면 가장 많이 겹치는 지점. False면 그렇지 않은 지점.
-first_point = -1  # 가장 많이 겹치는 구간의 시작점
-while j != max_point+1:
-    if points[j] == max_val:
-        if not isbool:  # 가장 많이 겹치는 구간의 시작점을 고정
-            first_point = j
-            isbool = True
-    else:
-        if isbool:  # True이면 시작점부터 현재 지점-1의 구간을 리스트에 저장
-            range_arr.append((first_point, j-1))
-            isbool = False
-
-    j += 1
-
-print(f'가장 많이 겹치는 지점은 ', end='')
-for x, y in range_arr:
-    print(f'({x}, {y}) ', end='')
-print(f'이고, 개수는 {max_val}')
+# 가장 많이 겹치는 지점, 개수 출력
+print('가장 많이 겹치는 지점은 ', end='')
+for i in range(len(points)):
+    if max_val == points[i]:
+        print(f'{i} ', end=' ')
+print(f'이고 가장 많이 겹치는 개수는 {max_val}입니다.')

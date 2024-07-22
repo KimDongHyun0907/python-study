@@ -12,6 +12,7 @@
 11. [다중 반복문](https://github.com/KimDongHyun0907/python-study/tree/main/multiple%20loops)
 12. [리스트](https://github.com/KimDongHyun0907/python-study/tree/main/list)
 13. [2차원 배열](https://github.com/KimDongHyun0907/python-study/tree/main/2D%20array)
+14. [문자열](https://github.com/KimDongHyun0907/python-study/tree/main/string)
 
 ## python-project
 1. [스도쿠](https://github.com/KimDongHyun0907/python-study/tree/main/python-project/sudoku)

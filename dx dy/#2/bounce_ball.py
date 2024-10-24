@@ -1,26 +1,16 @@
 n = int(input())
 arr = [list(input()) for _ in range(n)]
-k = int(input())
 
 d = [(1, 0), (0, -1), (-1, 0), (0, 1)] # 아래 왼 위 오른
 
-d_num = (k - 1) // n
-x, y = [(0, k - 1), 
-            (k - n - 1, n - 1), 
-            (n - 1, (n - 1) - (k - 1) % n), 
-            ((n - 1) - (k - 1) % n, 0)][d_num]
+for i in range(n):
+  x, y, d_num, cnt = 0, i, 0, 0
+  curr_x, curr_y = x, y
 
-cnt = 0
-while 0 <= x < n and 0 <= y < n:
-  if arr[x][y] == '\\':
-    d_num = 3 - d_num
+  while 0 <= curr_x < n and 0 <= curr_y < n:
+    d_num = 3 - d_num if arr[curr_x][curr_y] == '\\' else d_num ^ 1
+    dx, dy = d[d_num]
+    curr_x, curr_y = curr_x + dx, curr_y + dy
+    cnt += 1
 
-  else:
-    d_num = d_num ^ 1
-  
-  dx, dy = d[d_num]
-  x, y = x + dx, y + dy
-
-  cnt += 1
-
-print(cnt)
+  print(f'({x+1}, {y+1}) {cnt}')

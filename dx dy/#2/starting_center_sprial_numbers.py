@@ -1,23 +1,28 @@
+def fill_out_numbers(number, n, step, x, y, first_d_num):
+  d_num = first_d_num
+  while number <= n * n:
+    for _ in range(2):
+      for _ in range(step):
+        if number > n * n:
+          break
+        dx, dy = d[d_num]
+        x, y = x + dx, y + dy
+        arr[x][y] = number
+        number += 1
+      d_num = (d_num + first_d_num + 1) % 4
+    step += 1
+
 n = int(input())
 arr = [[0] * n for _ in range(n)]
+is_clockwise = int(input())  # 0 반시계, 1 시계
 
 x, y = n // 2, n // 2
 arr[x][y] = 1
 d = [(0, 1), (-1, 0), (0, -1), (1, 0)] # 오른 위 왼 아래
-d_num, step, number = 0, 1, 2
+step, number = 1, 2
 
-while number <= n * n:
-  for _ in range(2):
-    for _ in range(step):
-      if number > n * n:
-        break
-      dx, dy = d[d_num]
-      x, y = x + dx, y + dy
-      arr[x][y] = number
-      number += 1
-    d_num = (d_num + 1) % 4
-  step += 1
-
+fill_out_numbers(number, n, step, x, y, 2) if is_clockwise else fill_out_numbers(number, n, step, x, y, 0)
+  
 for row in arr:
   print(*row)
 
